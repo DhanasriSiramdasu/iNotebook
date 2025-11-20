@@ -8,6 +8,7 @@ const AddNote = () => {
         e.preventDefault();          // ❗ Prevent page reload
         // Call context function
         addNote(notes.title, notes.description, notes.tag);
+        setNotes({ title: "", description: "", tag: "Default" }); 
     }
 
     const onChange = (e) => {
