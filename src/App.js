@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Navbar from './components/Navbar';
 import Notes from './components/Notes';
 import NoteState from './context/NoteState';
+import Modal from './components/Modal';
 import {
   BrowserRouter as Router,
   Routes,
@@ -16,6 +17,7 @@ function App() {
       <NoteState>
       <Router>
         <Navbar />
+        <Modal />
         <Alert message="This is alert section"/>
         <Routes>
           <Route path="/" element={<Home />} />

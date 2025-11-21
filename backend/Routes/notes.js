@@ -49,6 +49,21 @@ router.put('/updatenote/:id', fetchuser, async (req, res) => {
     res.send(note);
 });
 
+
+//Router to get note to update
+router.get('/getnote/:id', fetchuser, async (req, res) => {
+
+    //find the note that to be updated and update it
+    let note = await Notes.findById(req.params.id);
+    if (!note) { return res.status(404).send("Not Found") };
+
+    if (note.user.toString() !== req.user.id) {
+        return res.status(401).send("Not Allowed");
+    }
+    note = await Notes.findById(req.params.id);
+    res.send(note);
+});
+
 router.delete('/deletenote/:id', fetchuser, async (req, res) => {
     try {
         // Find note by ID
