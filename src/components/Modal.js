@@ -6,7 +6,6 @@ const Modal = () => {
     const {fetchNotes,setFetchNotes,editNote}=useContext(NoteContext);
     const handleOnChange=(e)=>{
         setFetchNotes({...fetchNotes, [e.target.id]: e.target.value});
-        console.log(fetchNotes);
     };
     const handleSubmitClick = (e) => {
     e.preventDefault();
@@ -43,7 +42,6 @@ const Modal = () => {
                                         <label htmlFor="tag" className="form-label">Tag</label>
                                         <input type="text" className="form-control" id="tag"  cols="30" value={fetchNotes.tag} onChange={handleOnChange} />
                                     </div>
-                                    <button type="submit" className="btn btn-primary" onClick={handleSubmitClick}>Submit</button>
                                 </form>
                             </div>
 
@@ -56,7 +54,7 @@ const Modal = () => {
                                     Close
                                 </button>
 
-                                <button type="button" className="btn btn-primary">
+                                <button type="button" className="btn btn-primary" onClick={handleSubmitClick}>
                                     Save changes
                                 </button>
                             </div>

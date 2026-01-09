@@ -15,7 +15,7 @@ const NoteItem = (props) => {
 };
     return (
         <>
-            <div className="card container my-3" style={{ width: "18rem" }}>
+            <div className="card container my-3" style={{ width: "18rem", backgroundColor: "#FEE685", color: "black" }}>
                 <div className="card-body">
                     <h5 className="card-title">{props.note.title}</h5>
                     <i className="fa-solid fa-trash" onClick={handleOnClick}></i>

@@ -1,15 +1,20 @@
-import React,{useEffect} from 'react'
+import React, { useEffect } from 'react'
 import {
-  Link,useLocation
+    Link, useLocation, useNavigate
 } from "react-router-dom";
 const Navbar = () => {
     let location = useLocation();
-    useEffect(()=>{
+    useEffect(() => {
         console.log(location.pathname);
-    },[location]);
+    }, [location]);
+    const navigate = useNavigate();
+    const handleLogout = () => {
+        localStorage.removeItem("token");
+        navigate("/");
+    };
     return (
         <>
-            <nav className="navbar navbar-expand-lg bg-body-tertiary">
+            <nav className="navbar navbar-expand" style={{backgroundColor: "#FFE75C"}}>
                 <div className="container-fluid">
                     <a className="navbar-brand" href="/">iNOTEBOOK</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,16 +23,22 @@ const Navbar = () => {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <Link className={`nav-link ${location.pathname==="/"?"active":""}`} aria-current="page" to="/">Home</Link>
+                                <Link className={`nav-link ${location.pathname === "/" ? "active" : ""}`} aria-current="page" to="/">Home</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className={`nav-link ${location.pathname==="/about"?"active":""}`} to="/about">About</Link>
+                                <Link className={`nav-link ${location.pathname === "/about" ? "active" : ""}`} to="/about">About</Link>
                             </li>
                         </ul>
-                        <form className="d-flex" role="search">
-                            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                            <button className="btn btn-outline-success" type="submit">Search</button>
-                        </form>
+                        {!localStorage.getItem("token") ? (
+                            <>
+                                <Link className="btn mx-1" style={{ backgroundColor: "#FDC745", color: "black" }} to="/">Login</Link>
+                                <Link className="btn mx-1" style={{ backgroundColor: "#FDC745", color: "black" }} to="/signup">Signup</Link>
+                            </>
+                        ) : (
+                            <button className="btn" style={{ backgroundColor: "#A39000", color: "black" }} onClick={handleLogout}>
+                                Logout
+                            </button>
+                        )}
                     </div>
                 </div>
             </nav>

@@ -45,6 +45,35 @@ router.post('/createuser',
             res.status(500).send("Some error occurred");
         }
     });
+
+//ROUTE-1.1 updating password i.e http://localhost:5000/api/auth/updatepassword
+router.put('/updatepassword', fetchuser, async (req, res) => {
+    const { oldPassword, newPassword } = req.body;
+
+    try {
+        const user = await User.findById(req.user.id);
+
+        const comparePassword = await bcrypt.compare(oldPassword, user.password);
+        if (!comparePassword) {
+            return res.status(400).json({ error: "Incorrect old password" });
+        }
+
+        const salt = await bcrypt.genSalt(10);
+        const secPass = await bcrypt.hash(newPassword, salt);
+
+        user.password = secPass;
+        await user.save();
+
+        res.json({ success: true, message: "Password updated successfully" });
+
+    } catch (err) {
+        console.error(err);
+        res.status(500).send("Internal Server Error");
+    }
+});
+
+
+
 //ROUTE-2 creating the api key for login i.e http://localhost:5000/api/auth/login
 router.post('/login',
     [body('email', 'Please enter a valid email').isEmail(),
@@ -55,6 +84,7 @@ router.post('/login',
             return res.status(400).json({ errors: errors.array() })
         }
         const { email, password } = req.body;
+        let success=false;
         try {
             let user = await User.findOne({ email });
             if (!user) {
@@ -70,8 +100,11 @@ router.post('/login',
                 }
             }
             const authtoken = jwt.sign(data, JWT_SECRET);
-
-            return res.json({ authtoken });
+            success=true;
+            return res.json({ success,authtoken });
+            if(success){
+                console.log("logged in successfully");
+            }
         }
         catch (err) {
             console.log(err)
