@@ -96,4 +96,4 @@ iNOTEBOOK/
 👩‍💻 Author
 
 Your Name
-GitHub: https://github.com/DhanasriSiramdasu/iNotebook
+GitHub: https://github.com/DhanasriSiramdasu
