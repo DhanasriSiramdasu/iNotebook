@@ -43,39 +43,6 @@ iNOTEBOOK is a full-stack notes application that enables users to securely creat
 
 ---
 
-## 📁 Project Structure
-
-
-
-iNOTEBOOK/
-│
-├── backend/
-|
-│ ├── routes/ # API routes
-│ ├── controllers/ # Request handling logic
-│ ├── models/ # MongoDB schemas
-│ ├── middleware/ # Auth & validation middleware
-│ ├── db.js # Database connection
-│ └── index.js # Backend entry point
-│
-├── public/
-│ └── index.html # React root HTML
-│
-├── src/
-│ ├── components/ # Reusable UI components
-│ ├── context/ # Global state management
-│ ├── App.js
-│ ├── App.css
-│ ├── index.js
-│ └── index.css
-│
-├── node_modules/
-├── package.json
-├── package-lock.json
-├── .gitignore
-
-
----
 
 ## 🔐 Authentication & Authorization
 
