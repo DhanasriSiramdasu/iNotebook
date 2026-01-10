@@ -50,6 +50,7 @@ iNOTEBOOK is a full-stack notes application that enables users to securely creat
 iNOTEBOOK/
 │
 ├── backend/
+|
 │ ├── routes/ # API routes
 │ ├── controllers/ # Request handling logic
 │ ├── models/ # MongoDB schemas
