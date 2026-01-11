@@ -93,6 +93,15 @@ The app features a modern React frontend, a Node.js/Express backend, and a Mongo
 | POST   | `/api/auth/getuser`        | Get details of logged-in user (protected) |
 | PUT    | `/api/auth/updatepassword` | Update password for logged-in user        |
 
+| Method | Endpoint                    | Description                                       |
+| ------ | --------------------------- | ------------------------------------------------- |
+| GET    | `/api/notes/fetchallnotes`  | Fetch all notes of the logged-in user (protected) |
+| POST   | `/api/notes/addnote`        | Add a new note (protected)                        |
+| GET    | `/api/notes/getnote/:id`    | Fetch a single note by ID (protected)             |
+| PUT    | `/api/notes/updatenote/:id` | Update an existing note by ID (protected)         |
+| DELETE | `/api/notes/deletenote/:id` | Delete a note by ID (protected)                   |
+
+
 
 ---
 
