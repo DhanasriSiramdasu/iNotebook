@@ -1,4 +1,4 @@
-📝 iNOTEBOOK
+#📝 iNOTEBOOK
 
 iNotebook is a full-stack notes application that allows users to securely create, manage, and organize personal notes. It implements JWT-based authentication, bcrypt password hashing, and protected routes to ensure secure access and user-specific data isolation.
 
