@@ -93,6 +93,8 @@ The app features a modern React frontend, a Node.js/Express backend, and a Mongo
 | POST   | `/api/auth/getuser`        | Get details of logged-in user (protected) |
 | PUT    | `/api/auth/updatepassword` | Update password for logged-in user        |
 
+
+
 | Method | Endpoint                    | Description                                       |
 | ------ | --------------------------- | ------------------------------------------------- |
 | GET    | `/api/notes/fetchallnotes`  | Fetch all notes of the logged-in user (protected) |
@@ -101,11 +103,17 @@ The app features a modern React frontend, a Node.js/Express backend, and a Mongo
 | PUT    | `/api/notes/updatenote/:id` | Update an existing note by ID (protected)         |
 | DELETE | `/api/notes/deletenote/:id` | Delete a note by ID (protected)                   |
 
+---
 
+## 📌 License
+
+&nbsp; MIT License – free to use and modify for learning or personal projects.
+## 
 
 ---
 
-👩‍💻 Author
+👩‍🎓 **Author:** Dhanasri Siramdasu
 
-Your Name
-GitHub: https://github.com/DhanasriSiramdasu
+💻 **GitHub:** https://github.com/DhanasriSiramdasu
+
+🔗 **LinkedIn:** https://www.linkedin.com/in/dhanasrisiramdasu/
