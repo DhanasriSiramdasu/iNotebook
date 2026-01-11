@@ -32,7 +32,7 @@ The app features a modern React frontend, a Node.js/Express backend, and a Mongo
 
 ## Screenshots
 
-<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/0361a413-40a5-4bae-b463-e4984f9045ef" /> <img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/e594c508-e8ad-4d85-a856-6ff3a890628b" />
+<img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/0361a413-40a5-4bae-b463-e4984f9045ef" />     <img width="400" height="600" alt="image" src="https://github.com/user-attachments/assets/e594c508-e8ad-4d85-a856-6ff3a890628b" />
 
 
 ---
