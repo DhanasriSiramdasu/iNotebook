@@ -1,22 +1,40 @@
-# iNOTEBOOK 📝
+📝 iNOTEBOOK
 
-iNOTEBOOK is a full-stack notes application that enables users to securely create, manage, and organize personal notes. The application implements JWT-based authentication with bcrypt password hashing to ensure secure access and user-specific data isolation. Backend APIs are tested and validated using Postman.
+iNotebook is a full-stack notes application that allows users to securely create, manage, and organize personal notes. It implements JWT-based authentication, bcrypt password hashing, and protected routes to ensure secure access and user-specific data isolation.
+
+The app features a modern React frontend, a Node.js/Express backend, and a MongoDB database, with APIs fully tested using Postman
+
+---
+
+🚀 Features
+
+✅ User Signup & Login
+
+🔐 JWT-based Authentication & Authorization
+
+🔑 Password hashing using bcrypt
+
+🔄 Update password functionality
+
+👤 Secure access to user-specific notes
+
+✏️ Full CRUD (Create, Read, Update, Delete) operations for notes
+
+🌐 RESTful backend APIs
+
+⚛️ Context API for global state management in React
+
+📱 Responsive frontend UI
+
+🧪 Backend API testing using Postman
 
 ---
 
-## 🚀 Features
+## Screenshots
 
-- User Signup & Login
-- JWT-based Authentication & Authorization
-- Password hashing using bcrypt
-- Secure access to user-specific notes
-- Create, Read, Update, Delete (CRUD) operations
-- RESTful backend APIs
-- Context API for global state management
-- Responsive frontend UI
-- Backend API testing using Postman
 
 ---
+
 
 ## 🛠️ Tech Stack
 
@@ -46,10 +64,13 @@ iNOTEBOOK is a full-stack notes application that enables users to securely creat
 
 ## 🔐 Authentication & Authorization
 
-- User authentication using secure login/signup
-- Protected API routes using middleware
-- Authorization ensures users access only their own notes
+- User signup and login with secure JWT token
 
+- Protected API routes using middleware
+
+- Users can only access their own notes
+
+- Password updates are hashed and stored securely
 ---
 
 ## 🔄 CRUD Operations on Notes
@@ -58,6 +79,16 @@ iNOTEBOOK is a full-stack notes application that enables users to securely creat
 - **Read:** Fetch user-specific notes
 - **Update:** Modify existing notes
 - **Delete:** Remove notes securely
+
+---
+
+| Method | Endpoint                   | Description                               |
+| ------ | -------------------------- | ----------------------------------------- |
+| POST   | `/api/auth/createuser`     | Create a new user                         |
+| POST   | `/api/auth/login`          | Authenticate a user and get JWT           |
+| POST   | `/api/auth/getuser`        | Get details of logged-in user (protected) |
+| PUT    | `/api/auth/updatepassword` | Update password for logged-in user        |
+
 
 ---
 
