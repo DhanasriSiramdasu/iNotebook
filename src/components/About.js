@@ -20,7 +20,7 @@ const About = () => {
 
   const fetchUserDetails = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/auth/getuser", {
+      const response = await fetch("https://inotebook-backend-f46v.onrender.com/api/auth/getuser", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -38,7 +38,7 @@ const About = () => {
   const handleChangePassword = async (e) => {
     e.preventDefault();
 
-    const response = await fetch("http://localhost:5000/api/auth/updatepassword", {
+    const response = await fetch("https://inotebook-backend-f46v.onrender.com/api/auth/updatepassword", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
