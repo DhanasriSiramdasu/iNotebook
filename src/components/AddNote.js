@@ -45,7 +45,7 @@ const AddNote = () => {
                     <label htmlFor="description" className="form-label">Description</label>
                     <input type="text" className="form-control" id="description" value={notes.description} onChange={onChange} />
                 </div>
-                <button type="submit" className="btn" style={{ backgroundColor: "#FFEC5C", color: "black" }} onClick={handleOnclick}>Submit</button>
+                <button type="submit" className="btn" style={{ backgroundColor: "#b5b2ae", color: "black" }} onClick={handleOnclick}>Submit</button>
             </form>
             <h2 className="my-2" >Hello {userName}!!! Your notes-</h2>
         </div>

@@ -14,7 +14,7 @@ const Navbar = () => {
     };
     return (
         <>
-            <nav className="navbar navbar-expand" style={{backgroundColor: "#FFE75C"}}>
+            <nav className="navbar navbar-expand" style={{ backgroundColor: "#635d69" }}>
                 <div className="container-fluid">
                     <a className="navbar-brand" href="/">iNOTEBOOK</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,11 +31,11 @@ const Navbar = () => {
                         </ul>
                         {!localStorage.getItem("token") ? (
                             <>
-                                <Link className="btn mx-1" style={{ backgroundColor: "#FDC745", color: "black" }} to="/">Login</Link>
-                                <Link className="btn mx-1" style={{ backgroundColor: "#FDC745", color: "black" }} to="/signup">Signup</Link>
+                                <Link className="btn mx-1" style={{ backgroundColor: "#635d69", color: "black" }} to="/">Login</Link>
+                                <Link className="btn mx-1" style={{ backgroundColor: "#635d69", color: "black" }} to="/signup">Signup</Link>
                             </>
                         ) : (
-                            <button className="btn" style={{ backgroundColor: "#A39000", color: "black" }} onClick={handleLogout}>
+                            <button className="btn" style={{ backgroundColor: "#635d69", color: "black" }} onClick={handleLogout}>
                                 Logout
                             </button>
                         )}

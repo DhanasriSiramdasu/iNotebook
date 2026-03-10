@@ -7,10 +7,13 @@ const Notes = () => {
   const location = useLocation();
   const { notes, getNotes } = useContext(NoteContext);
   useEffect(() => {
-    if (localStorage.getItem("token")) {
-      getNotes(localStorage.getItem("token")); // <-- fetch notes only if logged in
+    // Check if user is logged in
+    const token = localStorage.getItem("token");
+    if (token) {
+      getNotes(token); // fetch notes every time path changes
     }
-  }, [location.pathname]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location.pathname]); 
   return (
     <div className="container my-3">
     <div className="row">
